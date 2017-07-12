@@ -80,3 +80,9 @@ variable "cloud_provider_config" {
 variable "kubelet_node_label" {
   type = "string"
 }
+
+variable "public_ip_address_ids" {
+  description = "Optional public IP ids to associate with workers"
+  type = "list"
+  default = []
+}
