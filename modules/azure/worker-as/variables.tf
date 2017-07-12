@@ -84,5 +84,5 @@ variable "kubelet_node_label" {
 variable "public_ip_address_ids" {
   description = "Optional public IP ids to associate with workers"
   type = "list"
-  default = []
+  default = [""]
 }
