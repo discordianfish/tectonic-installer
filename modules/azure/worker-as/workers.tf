@@ -41,7 +41,7 @@ resource "azurerm_network_interface" "tectonic_worker" {
 
   ip_configuration {
     private_ip_address_allocation = "dynamic"
-    public_ip_address_id          = "${length(var.public_ip_address_ids) > 0 ? element(concat(public_ip_address_ids, list("")), count.index) : ""}"
+    public_ip_address_id          = "${length(var.public_ip_address_ids) > 0 ? element(concat(var.public_ip_address_ids, list("")), count.index) : ""}"
     name                          = "${var.cluster_name}-WorkerIPConfiguration"
     subnet_id                     = "${var.subnet}"
 
