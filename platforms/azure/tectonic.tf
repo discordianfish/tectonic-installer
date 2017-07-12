@@ -29,7 +29,7 @@ module "bootkube" {
   etcd_ca_cert     = "${var.tectonic_etcd_ca_cert_path}"
   etcd_client_cert = "${var.tectonic_etcd_client_cert_path}"
   etcd_client_key  = "${var.tectonic_etcd_client_key_path}"
-  etcd_tls_enabled = "${var.tectonic_etcd_tls_enabled}"
+  etcd_tls_enabled = "false" # FIXME: TLS is not supported on Azure
 
   etcd_cert_dns_names = [
     "${var.tectonic_cluster_name}-etcd-0.${var.tectonic_base_domain}",
